@@ -713,7 +713,7 @@ class TtNews extends AbstractPlugin
      * @throws \Doctrine\DBAL\DBALException
      */
 
-    protected function displayList($excludeUids = '0')
+    public function displayList($excludeUids = '0')
     {
 
         if ($this->debugTimes) {
@@ -1331,7 +1331,7 @@ class TtNews extends AbstractPlugin
      * @return    string        html-code for the "single view"
      * @throws \Doctrine\DBAL\DBALException
      */
-    protected function displaySingle()
+    public function displaySingle()
     {
 
         $lConf = $this->conf['displaySingle.'];
@@ -1499,7 +1499,7 @@ class TtNews extends AbstractPlugin
      * @return    string        html code of the archive menu
      * @throws \Doctrine\DBAL\DBALException
      */
-    protected function displayArchiveMenu()
+    public function displayArchiveMenu()
     {
         if ($this->debugTimes) {
             $this->helpers->getParsetime(__METHOD__ . ' start');
@@ -1750,7 +1750,7 @@ class TtNews extends AbstractPlugin
      * @return    string        html for the category menu
      * @throws \Doctrine\DBAL\DBALException
      */
-    protected function displayCatMenu()
+    public function displayCatMenu()
     {
         $content = '';
         $lConf = $this->conf['displayCatMenu.'];
@@ -3843,7 +3843,7 @@ class TtNews extends AbstractPlugin
      * @return \Doctrine\DBAL\Driver\Statement|bool
      * @throws \Doctrine\DBAL\DBALException
      */
-    protected function exec_getQuery($table, $conf)
+    public function exec_getQuery($table, $conf)
     {
         $error = 0;
         // Construct WHERE clause:
