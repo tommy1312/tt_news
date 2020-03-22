@@ -25,6 +25,7 @@ CREATE TABLE tt_news (
   author varchar(255) DEFAULT '' NOT NULL,
   author_email varchar(255) DEFAULT '' NOT NULL,
   category int(11) DEFAULT '0' NOT NULL,
+  slug text,
 
   news_files text,
   links text,
